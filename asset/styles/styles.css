@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+section {
+  background: #fff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#expense-form-section,
+#filter-section {
+  flex: 1 1 300px;
+}
+
+#expense-list-section {
+  flex: 2 1 500px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #52b929;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px 2px;
+}
+
+button:hover {
+  background-color: #52b929;
+}
+
+td[data-category="Food"] {
+  background-color: #ffe6e6;
+}
+
+td[data-category="Transport"] {
+  background-color: #e6f2ff;
+}
+
+td[data-category="Entertainment"] {
+  background-color: #e6ffe6;
+}
+
+td[data-category="Other"] {
+  background-color: #fff0e6;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #expense-form-section,
+  #filter-section,
+  #expense-list-section {
+    flex: 1 1 100%;
+  }
+}
