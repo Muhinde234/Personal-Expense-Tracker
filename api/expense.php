@@ -18,11 +18,11 @@ switch ($method) {
         }
         break;
 
-    // POST: Add a new expense
+  
     case "POST":
         $data = json_decode(file_get_contents("php://input"), true);
 
-        // Validation
+      
         if (
             empty($data["description"]) ||
             !isset($data["amount"]) ||
@@ -94,7 +94,7 @@ switch ($method) {
         }
         break;
 
-    // DELETE: Remove an expense
+    
     case "DELETE":
         $data = json_decode(file_get_contents("php://input"), true);
 
